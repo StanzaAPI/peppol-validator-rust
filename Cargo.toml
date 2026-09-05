@@ -1,0 +1,18 @@
+[package]
+name = "stanzaapi-peppol-validator"
+version = "1.0.0"
+edition = "2021"
+authors = ["Stanza"]
+description = "Official high-speed Rust client for Peppol BIS Billing 3.0 & EN 16931 E-Invoice Engine"
+license = "MIT"
+readme = "README.md"
+homepage = "https://stanzaapi.com/tools/peppol-validator"
+repository = "https://github.com/stanzaapi/peppol-validator-rust"
+keywords = ["peppol","en16931","e-invoice","ubl","factur-x"]
+categories = ["web-programming::http-client", "development-tools::ffi"]
+
+[dependencies]
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"], optional = true }
